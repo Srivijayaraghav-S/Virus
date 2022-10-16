@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -116,9 +117,22 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
-
+STATIC_URL = '/static/'
+AUTH_USER_MODEL = 'homepage.StudentUser'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+SOCIAL_AUTH_TRAILING_SLASH=False
+SOCIAL_AUTH_AUTH0_DOMAIN='dev-ae7x8ji9.us.auth0.com'
+SOCIAL_AUTH_AUTH0_KEY='KNgQkB7UGLH81QLqh8C0SVoFXUK9uOYF'
+SOCIAL_AUTH_AUTH0_SECRET='MT5eAgvidGncSljrB49XeXsLkO9E32lka1IDpr7SPWeTcXVZHANU6p18PEO_5M0K'
+SOCIAL_AUTH_AUTH0_SCOPE=['openid','profile','email']
+
+AUTHENTICATION_BACKENDS=[
+    'social_core.backends.auth0.Auth0OAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+]
+LOGIN_URL='/login/auth0'
+LOGIN_REDIRECT_URL='/'
+LOGOUT_REDIRECT_URL='/'
