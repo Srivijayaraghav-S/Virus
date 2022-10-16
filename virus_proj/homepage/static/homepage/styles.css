@@ -164,9 +164,6 @@ input::placeholder {
 .testimony-img {
   width: 100%;
 }
-
-.carousel-item {
-}
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
   color: black;
@@ -227,7 +224,7 @@ input::placeholder {
 .motto {
   color: white;
   position: absolute;
-  z-axis: 100;
+  z-index: 100;
   margin-left: 45rem;
   font-size: 5rem;
   padding-bottom: 8rem;
