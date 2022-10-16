@@ -134,5 +134,5 @@ AUTHENTICATION_BACKENDS=[
     'django.contrib.auth.backends.ModelBackend',
 ]
 LOGIN_URL='/login/auth0'
-LOGIN_REDIRECT_URL='/'
+LOGIN_REDIRECT_URL='/studentprofile/'
 LOGOUT_REDIRECT_URL='/'
