@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -13,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="student-profile-styles.css">
+    <link rel="stylesheet" href="{% static 'homepage/student-profile-styles.css' %}">
   </head>
 
   <body>
@@ -22,17 +23,17 @@
 
 
       <nav class="navbar navbar-custom navbar-expand-lg   justify-content-end">
-        <a class="navbar-brand" href="#"><img class="logo" src="C:\Users\paapu\OneDrive\Desktop\Web Dev\Transfinitte\NITT Logo - Color.png" /> NITT Placement Portal</a>
+        <a class="navbar-brand" href="#"><img class="logo" src="{% static 'homepage\NITT Logo - Color.png' %}" /> NITT Placement Portal</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link" href="#">Home</a>
-            <a class="nav-item nav-link" href="#">Academics</a>
-            <a class="nav-item nav-link" href="#">Past Recruiters</a>
-            <a class="nav-item nav-link last" href="#">Contact Us</a>
+            <a class="nav-item nav-link" href="{% url 'index' %}">Home</a>
+            <a class="nav-item nav-link" href="{% url 'academics' %}">Academics</a>
+            <a class="nav-item nav-link" href="{% url 'past' %}">Past Recruiters</a>
+            <a class="nav-item nav-link last" href="{% url 'contact' %}">Contact Us</a>
 
           </div>
         </div>
@@ -83,23 +84,11 @@
       </div>
     </div>
       </form>
-    <div class="dropdown">
-    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Company
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="#">Company 1</a>
-      <a class="dropdown-item" href="#">Company 2</a>
-      <a class="dropdown-item" href="#">company 3</a>
-    </div>
-  </div>
-
-  <label class="form-label" for="customFile">Attach your resume: </label>
-<input type="file" class="form-control" id="customFile" />
+  
+    
 
 
-
-<button type="button" class="btn btn-outline-success">Submit</button>
+      <button type="button" class="btn btn-success">View the recruiters</button>
 
 
   </div>

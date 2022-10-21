@@ -56,11 +56,16 @@
           For Your Hire!
         </p>
       </div>
+      {% if user.is_authenticated %}
       <div class="login-btn">
-
-
-        <button type="button" class="btn btn-outline-light">Students</button>
+        <a type="button" class="btn btn-outline-light" href="/logout/">Students</a>
       </div>
+      {% else %}
+      <div class="login-btn">
+        <a type="button" class="btn btn-outline-light" href="/login/auth0">Students</a>
+      </div>
+      
+      {% endif %}
       <div class="login-btn">
         <button type="button" class="btn btn-outline-light">Recruiters</button>
       </div>
@@ -272,7 +277,7 @@ Short listed or waitlisted candidates will be allowed to sit for the companies t
      </p>
      <ul class="list-unstyled d-flex">
        <li class="ms-3">
-         <a class="link-dark" href="#"><i class="footer-icon fa-brands fa-instagram"></i></a>
+         <a class="link-dark" href="https://www.instagram.com/nit_tiruchirappalli/"><i class="footer-icon fa-brands fa-instagram"></i></a>
        </li>
        <li class="ms-3">
          <a class="link-dark" href="#"><i class="footer-icon fa-brands fa-twitter"></i></a>
